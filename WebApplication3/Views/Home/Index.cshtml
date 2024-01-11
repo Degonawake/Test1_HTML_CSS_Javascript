@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h1>CompSci Tech Interview</h1>
+<p id="para1">- Make all the p elements red using css class.</p>
+<p>- Input should have light yellow background</p>
+<p>- Limit the hire date to only accept dates between 01/01/1950 and current date</p>
+<p>- Set a place holder in the name saying "Write your name here".</p>
+<p>- Hire date and name should be mandatory, pop up an error message when they are empty.</p>
+<p>- Calculate employement years</p>
+
+<input id="name" placeholder="Write Your Name Here" style="background-color:lightyellow" required>
+<input id="hireDate" value="07/23/1985" min="01/01/1950" max="@DateTime.UtcNow" required>
+<button onclick="calculate()">Get my years of service</button>
+
+<div id="AgeResult"></div>
