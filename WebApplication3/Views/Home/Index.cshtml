@@ -8,15 +8,16 @@
 </div>
 
 <h1>CompSci Tech Interview</h1>
-<p id="para1">- Make all the p elements red using css class.</p>
+<p>- Make all the p elements red using css class.</p>
 <p>- Input should have light yellow background</p>
 <p>- Limit the hire date to only accept dates between 01/01/1950 and current date</p>
 <p>- Set a place holder in the name saying "Write your name here".</p>
 <p>- Hire date and name should be mandatory, pop up an error message when they are empty.</p>
 <p>- Calculate employement years</p>
 
-<input id="name" placeholder="Write Your Name Here" style="background-color:lightyellow" required>
-<input id="hireDate" value="07/23/1985" min="01/01/1950" max="@DateTime.UtcNow" required>
+<input id="name" placeholder="Write Your Name Here" style="background-color:lightyellow" title="Field required" required>
+<input type="date" id="hireDate" value="1985-07-23" min="1950-01-01" max="@(DateTime.Now.ToString("yyyy-MM-dd"))" title="Field required" required>
 <button onclick="calculate()">Get my years of service</button>
+
 
 <div id="AgeResult"></div>
